@@ -1,7 +1,8 @@
 from __future__ import print_function
 import numpy as np
 import matplotlib.pyplot as plt
-
+import sys
+sys.path.insert(0, "/home/manan/Desktop/neat-python-0.9")
 import neat
 from neat.activations import sigmoid_activation
 

@@ -2,6 +2,8 @@ from PIL import Image
 import os
 import random
 from multiprocessing import Pool
+import sys
+sys.path.insert(0, "/home/manan/Desktop/neat-python-0.9")
 
 import numpy as np
 import neat

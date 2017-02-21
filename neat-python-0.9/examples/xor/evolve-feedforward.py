@@ -4,8 +4,11 @@
 
 from __future__ import print_function
 import os
+import sys
+sys.path.insert(0, "/home/manan/Desktop/neat-python-0.9")
 import neat
 import visualize
+
 
 # 2-input XOR inputs and expected outputs.
 xor_inputs = [(0.0, 0.0), (0.0, 1.0), (1.0, 0.0), (1.0, 1.0)]
@@ -21,7 +24,7 @@ def eval_genomes(genomes, config):
             genome.fitness -= (output[0] - xo[0]) ** 2
 
 
-def run(config_file):
+def run2(config_file):
     # Load configuration.
     config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                          neat.DefaultSpeciesSet, neat.DefaultStagnation,
@@ -54,14 +57,14 @@ def run(config_file):
     visualize.plot_stats(stats, ylog=False, view=True)
     visualize.plot_species(stats, view=True)
 
-    p = neat.Checkpointer.restore_checkpoint('neat-checkpoint-4')
+    p = neat.Checkpointer.restore_checkpoint('neat-checkpoint-19')
     p.run(eval_genomes, 10)
 
 
 if __name__ == '__main__':
     # Determine path to configuration file. This path manipulation is
     # here so that the script will run successfully regardless of the
-    # current working directory.
-    local_dir = os.path.dirname(__file__)
-    config_path = os.path.join(local_dir, 'config-feedforward')
-    run(config_path)
+    # current working directory.'''
+	local_dir = os.path.dirname(__file__)
+	config_path = os.path.join(local_dir, 'config-feedforward')
+	run2(config_path)

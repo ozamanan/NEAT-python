@@ -11,7 +11,8 @@ from __future__ import division, print_function
 import math
 import os
 import random
-
+import sys
+sys.path.insert(0, "/home/manan/Desktop/neat-python-0.9")
 import neat
 import visualize
 

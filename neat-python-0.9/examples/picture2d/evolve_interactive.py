@@ -11,7 +11,8 @@ import math
 import os
 import pickle
 import pygame
-
+import sys
+sys.path.insert(0, "/home/manan/Desktop/neat-python-0.9")
 from multiprocessing import Pool
 import neat
 

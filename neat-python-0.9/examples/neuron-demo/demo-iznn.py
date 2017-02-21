@@ -1,5 +1,6 @@
 from __future__ import print_function
-
+import sys
+sys.path.insert(0, "/home/manan/Desktop/neat-python-0.9")
 import matplotlib.pyplot as plt
 import neat
 
